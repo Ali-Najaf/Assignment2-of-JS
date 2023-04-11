@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="script.js"></script>
+
+<body>
+    <ul id="my-list">
+        <li>Guava</li>
+        <li>Mango</li>
+        <li>Orange</li>
+    </ul>
+    <p id="changingBg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati quibusdam ut qui fugiat quasi
+        magnam ipsam minima provident, excepturi saepe consectetur sint quos beatae, unde, totam alias soluta
+        accusantium eum.</p>
+</body>
+
+<script>
+    // 3. Write a function that adds a new paragraph element to the bottom of an
+    // HTML document. The function should take a string argument that will be
+    // used as the text content of the new paragraph element.
+
+    function addNewParagraph(text) {
+        let newParagraph = document.createElement("p");
+        newParagraph.textContent = text;
+        document.body.appendChild(newParagraph);
+    }
+    addNewParagraph("Quaid-e-Azam, also known as Muhammad Ali Jinnah, was a lawyer, politician, and the founder of Pakistan. He was born on December 25, 1876, in Karachi, which was then a part of British India. Jinnah played a pivotal role in the struggle for the independence of Pakistan from British rule.");
+
+    //     4. Write a function that adds a new list item to an unordered list in an HTML
+    // document. The function should take a string argument that will be used as
+    // the text content of the new list item.
+
+    function addNewListItem(text) {
+        let li = document.createElement("li");
+        li.textContent = text;
+        let ul = document.getElementById("my-list");
+        ul.appendChild(li);
+        ul.setAttribute("type", "none");
+    }
+    addNewListItem("Apples")
+    addNewListItem("Apples")
+
+    // 5. Write a function that changes the background color of an HTML element.
+    // The function should take two arguments: the first argument is a reference
+    // to the HTML element, and the second argument is a string representing
+    // the new background color.
+
+    function changeBackgroundColor(changingBg, color) {
+        changingBg.style.backgroundColor = color;
+    }
+
+    let myDiv = document.getElementById("changingBg");
+    changeBackgroundColor(myDiv, "blue");
+</script>
+
+</html>
